@@ -3,6 +3,10 @@ import { MediaItemListComponent } from './media-item-list/media-item-list.compon
 
 
 const routes: Routes = [
+  {
+    path: 'add', 
+    loadChildren: () => import('./media-item-form/new-media-item.module').then(m => m.newMediaItemModule)
+  },
   {path: ':medium', component: MediaItemListComponent},
   {path: '', pathMatch: 'full', redirectTo: 'all'}
 ];

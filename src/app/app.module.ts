@@ -9,13 +9,11 @@ import { CategoryListPipe } from './pipes/category-list.pipe';
 import { lookupListToken, lookupList } from './providers';
 import { MockXHRBackend } from './backend/mock-xhr-backend';
 import { routing } from "./app.routing";
-import { newMediaItemModule } from "./media-item-form/new-media-item.module";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    newMediaItemModule,
     routing
   ],
   declarations: [
