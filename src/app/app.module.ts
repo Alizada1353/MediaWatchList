@@ -8,6 +8,7 @@ import { MediaItemFormComponent } from './media-item-form/media-item-form.compon
 import { FavoriteDirective } from './directives/favorite.directive';
 import { CategoryListPipe } from './pipes/category-list.pipe';
 
+
 @NgModule({
   imports: [
     BrowserModule,
