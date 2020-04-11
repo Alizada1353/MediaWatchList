@@ -50,7 +50,8 @@ form:FormGroup;
   }
 
   onSubmit(mediaItem: any) {
-    this.mediaItemService.add(mediaItem);
+    this.mediaItemService.add(mediaItem)
+    .subscribe();
   }
 
 }
