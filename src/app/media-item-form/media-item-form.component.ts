@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from "@angular/router";
 import { MediaItemService } from '../services/media-item.service';
 import { lookupListToken } from '../providers';
 
@@ -15,7 +16,8 @@ form:FormGroup;
   constructor(
     private formBuilder: FormBuilder, 
     private mediaItemService: MediaItemService,
-    @Inject(lookupListToken) public lookupList
+    @Inject(lookupListToken) public lookupList,
+    private router: Router
     ){}
 
   ngOnInit(): void {
@@ -51,7 +53,9 @@ form:FormGroup;
 
   onSubmit(mediaItem: any) {
     this.mediaItemService.add(mediaItem)
-    .subscribe();
+    .subscribe(() => {
+      this.router.navigate(['/', mediaItem.medium])
+    });
   }
 
 }
