@@ -15,6 +15,11 @@ header.medium-series {
 }
 header > h2 {
   font-size: 1.4em;
+  background-color: #53ace4;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 4px 8px;
 }
 header > h2.error {
   color: #d93a3e;
